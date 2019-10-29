@@ -40,22 +40,28 @@ public class Point : MonoBehaviour {
 
     }
 
-    private void EnterLocation() {
-
-
-
-    }
-
     void OnMouseDown() {
 
-        print("clicked!");
         sm = GameObject.FindGameObjectWithTag("SectorManager").GetComponent<SectorManager>();
 
-        foreach(GameObject neighbour in neighbourPoints) {
-            if(sm == neighbour) {
-                EnterLocation();
+        foreach (GameObject neighbour in neighbourPoints) {
+            if (sm.currentPoint == neighbour) {
+                if (location != null) {
+                    if (!wasVisited) {
+                        // new location.
+                        DestroyLines();
+                        sm.EnterLocation(location, this.gameObject);
+                    } else {
+                        // was already visited.
+                        sm.shipSilhoette.transform.position = this.transform.position;
+                        sm.currentPoint = this.gameObject;
+                    }
+                } else {
+                    Debug.LogError("No location set for this point: " + transform.name);
+                }
             }
-        } 
+
+        }
 
     }
 
@@ -72,7 +78,6 @@ public class Point : MonoBehaviour {
             // LineRenderer settings.
             lineRend.material = new Material(Shader.Find("Sprites/Default"));
             lineRend.widthMultiplier = 0.02f;
-            lineRend.positionCount = 1;
             lineRend.positionCount = 2;
             lineRend.sortingOrder = 1;
             // set start & end positions.

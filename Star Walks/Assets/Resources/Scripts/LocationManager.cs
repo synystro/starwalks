@@ -4,25 +4,38 @@ using TMPro;
 using UnityEngine.UI;
 
 public class LocationManager : MonoBehaviour {
-
+    [Space(10)]
     public Location location;
     public GameObject BG;
     [Space(10)]
-    public GameObject uiManagerGO;
+    public GameObject sector;
     [Space(10)]
+    public GameObject uiManagerGO;
 
     private List<GameObject> uiChoices = new List<GameObject>();
+
+    private GameObject exitChoice;
+
     private UIManager uiManager;
+
+    private SectorManager sm;
 
     private TextMeshProUGUI eventMessage;
 
     void Start() {
 
-        // set BG image;
+        // find sector manager.
+        sm = GameObject.FindGameObjectWithTag("SectorManager").GetComponent<SectorManager>();
+
+        // set BG image.
         BG.GetComponent<SpriteRenderer>().sprite = location.BG;
 
-        // set uiManager;
+        // set uiManager.
+        //uiManagerGO = GameObject.FindGameObjectWithTag("UIManager");
         uiManager = uiManagerGO.GetComponent<UIManager>();
+
+        // activate UI.
+        uiManager.eventCanvas.SetActive(true);
 
         // set text locations.
         eventMessage = uiManager.eventTextGO.GetComponent<TextMeshProUGUI>();
@@ -34,6 +47,9 @@ public class LocationManager : MonoBehaviour {
         uiChoices.Add(uiManager.eventChoice1);
         uiChoices.Add(uiManager.eventChoice2);
         uiChoices.Add(uiManager.eventChoice3);
+
+        // set UI's exit button.
+        exitChoice = uiChoices[1];
 
         FirstChoices();
         
@@ -56,7 +72,7 @@ public class LocationManager : MonoBehaviour {
         if (choice.responses.Length == 0) {
 
             EmptyResponse();
-            EmptyChoices();
+            NoChoices();
 
             return;
         }
@@ -73,7 +89,7 @@ public class LocationManager : MonoBehaviour {
 
         if (response.choices.Length == 0) {
 
-            EmptyChoices();
+            NoChoices();
 
             return;
         }
@@ -95,12 +111,33 @@ public class LocationManager : MonoBehaviour {
 
     }
 
-    void EmptyChoices() {
+    void ReactivateUIelements() {
+
+        uiManager.eventMessagePanel.SetActive(true);
+
+        for (int i = 0; i < uiChoices.Count; i++) {
+            uiChoices[i].GetComponent<TextMeshProUGUI>().text = "";
+            uiChoices[i].transform.parent.gameObject.SetActive(true);
+        }
+
+    }
+
+    void NoChoices() {
 
         for (int i = 0; i < uiChoices.Count; i++) {
             uiChoices[i].GetComponent<TextMeshProUGUI>().text = "";
             uiChoices[i].transform.parent.gameObject.SetActive(false);
         }
+
+        MoveOn();
+
+    }
+
+    void MoveOn() {
+
+        exitChoice.transform.parent.gameObject.SetActive(true);
+        exitChoice.GetComponent<TextMeshProUGUI>().text = "Engage...";
+        AddListenerToExit(exitChoice);
 
     }
 
@@ -109,13 +146,13 @@ public class LocationManager : MonoBehaviour {
         go.GetComponent<Button>().onClick.AddListener(delegate () { GiveResponse(choice); });
 
     }
-    /*
-    void AddListener(GameObject go) {
+    
+    void AddListenerToExit(GameObject go) {
 
         go.GetComponent<Button>().onClick.AddListener(delegate () { ExitLocation(); });
 
     }
-    */
+    
     void RemoveListener(GameObject go) {
 
         go.GetComponent<Button>().onClick.RemoveAllListeners();
@@ -124,8 +161,14 @@ public class LocationManager : MonoBehaviour {
 
     public void ExitLocation() {
 
-        print("exiting location.");
-        // exit this location.
+        ReactivateUIelements();
+
+        // deactivate UI canvas group.
+        uiManager.eventCanvas.SetActive(false);
+
+        sm.sector.SetActive(true);
+        sm.currentPoint.GetComponent<Point>().wasVisited = true;
+        Destroy(this.gameObject);
 
     }
 

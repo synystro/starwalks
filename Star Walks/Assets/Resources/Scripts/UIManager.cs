@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
     [Header("Event")]
+    [Space(10)]
+    public GameObject eventCanvas;
     [Space(10)]
     public GameObject eventImageGO;
     public Sprite eventImageSprite;
@@ -25,11 +24,4 @@ public class UIManager : MonoBehaviour {
     public string eventChoice2Text;
     public string eventChoice3Text;
 
-    void Start() {
-
-    }
-
-    void Update() {
-
-    }
 }

@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40a4e6f1dd04ed04c98ab49348cefe01, type: 3}
-  m_Name: 03-ScrapSurvivor
+  m_Name: 13-BribePaid
   m_EditorClassIdentifier: 
-  id: 3
-  text: You find scraps and a survivor!
+  id: 0
+  text: 'You pay the bribe and '
   isFight: 0
   isIntruder: 0
-  scraps: 20
+  scraps: 0
   rewards: []
-  crew:
-  - {fileID: 0}
+  crew: []
   intruder: []
   choices: []

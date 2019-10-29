@@ -48,7 +48,7 @@ public class PointGenerator : MonoBehaviour {
 
         // TODO: set points with sector manager?
 
-        gm.SpawnShipSilhouette(entrance.transform.position);
+        gm.SetShipSilhouette(entrance.transform.position);
         gm.shipSilhoette.transform.SetParent(this.transform.parent);
 
     }
@@ -79,6 +79,8 @@ public class PointGenerator : MonoBehaviour {
         GameObject pointGO = Instantiate(pointPrefab, currentPointLocation, Quaternion.identity);
         pointGO.transform.SetParent(this.transform);
 
+        AssignLocation(pointGO);
+        
         points.Add(pointGO);
 
     }
@@ -142,4 +144,13 @@ public class PointGenerator : MonoBehaviour {
 
     }
     
+    void AssignLocation(GameObject point) {
+
+        int random = Random.Range(0, sm.locationsToSpawn.Count);
+        Location randomLocation = sm.locationsToSpawn[random];
+
+        point.GetComponent<Point>().location = randomLocation;
+
+    }
+
 }

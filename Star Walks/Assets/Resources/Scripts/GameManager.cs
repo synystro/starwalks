@@ -22,8 +22,6 @@ public class GameManager : MonoBehaviour {
 
     public GameObject shipSilhoette;
 
-    public GameObject shipSilhouettePrefab;
-
     public string zone;
 
 
@@ -31,9 +29,12 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public void SpawnShipSilhouette(Vector2 position) {
+    public void SetShipSilhouette(Vector2 _position) {
 
-        shipSilhoette = Instantiate(shipSilhouettePrefab, position, Quaternion.identity);
+        SectorManager sm = GameObject.FindGameObjectWithTag("SectorManager").GetComponent<SectorManager>();
+        shipSilhoette = sm.shipSilhoette;
+
+        shipSilhoette.transform.position = _position;
 
     }
 }
