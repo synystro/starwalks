@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a4e6f1dd04ed04c98ab49348cefe01, type: 3}
+  m_Name: 04-HailPirate
+  m_EditorClassIdentifier: 
+  id: 4
+  text: You hear some noise followed by a distorted voice "Surrender your goods right
+    now, or fight us!".
+  isFight: 0
+  isIntruder: 0
+  scraps: 0
+  rewards: []
+  crew: []
+  intruder: []
+  choices:
+  - {fileID: 11400000, guid: 8e9d9b7bf407b574099ae4ab52ff55b3, type: 2}
+  - {fileID: 11400000, guid: 9358402b555576b449fc28c7ac2fa3d7, type: 2}
