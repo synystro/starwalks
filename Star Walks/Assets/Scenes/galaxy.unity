@@ -356,8 +356,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipSilhoette: {fileID: 0}
-  shipSilhouettePrefab: {fileID: 1771528737805462964, guid: 885300690e2963445a9be73c9c25b1f5,
-    type: 3}
   zone: 
 --- !u!1 &1309631965
 GameObject:

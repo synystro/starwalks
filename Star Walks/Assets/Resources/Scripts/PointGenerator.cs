@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PointGenerator : MonoBehaviour {
 
+    // setting z axis to 1 because on the point collider is undetected by OnMouse methods.
+    private int zAxis = 1;
+
     public GameObject smGO;
 
     [SerializeField]
@@ -65,7 +68,7 @@ public class PointGenerator : MonoBehaviour {
             float randomX = Random.Range(minX, maxX);
             float randomY = Random.Range(minY, maxY);
 
-            currentPointLocation = new Vector3(randomX, randomY, 1);
+            currentPointLocation = new Vector3(randomX, randomY, zAxis);
 
             foreach (GameObject p in points) {
 

@@ -40,7 +40,7 @@ public class Point : MonoBehaviour {
 
     }
 
-    void OnMouseDown() {
+    public void OnMouseDown() {
 
         sm = GameObject.FindGameObjectWithTag("SectorManager").GetComponent<SectorManager>();
 
@@ -65,7 +65,7 @@ public class Point : MonoBehaviour {
 
     }
 
-    void OnMouseEnter() {
+    public void OnMouseEnter() {
 
         for (int i = 0; i < neighbourPoints.Count; i++) {
 
@@ -87,10 +87,10 @@ public class Point : MonoBehaviour {
 
     }
 
-    void OnMouseExit() {
+    public void OnMouseExit() {
 
         DestroyLines();
 
     }
-
+    
 }

@@ -7,6 +7,7 @@ TagManager:
   - GameManager
   - SectorManager
   - UIManager
+  - Grid
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Impassable
   - 
   - 
   - 
