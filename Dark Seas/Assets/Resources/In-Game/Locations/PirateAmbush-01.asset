@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de3465153d05bc4099d54f75efd85a3, type: 3}
+  m_Name: PirateAmbush-01
+  m_EditorClassIdentifier: 
+  name: Pirate Ambush
+  BG: {fileID: 21300000, guid: 838f9e46b1dce5f43962673a0621d751, type: 3}
+  arrivalMessage: "Capit\xE3o, n\xF3s fomos emboscados, um navio pirata apareceu de
+    repente a estibordo, est\xE3o pedindo para nos rendermos, eles parecem ser eeerr...dur\xF5es,
+    mas acho que poder\xEDamos fugir facilmente ou at\xE9 enfrent\xE1-los, quais s\xE3o
+    suas ordens?"
+  arrivalMessageEnglishUK: Captain, a sub just uncloaked right in front us. It's a
+    pirate vessel and they are demanding the surrender of "some goods" in order for
+    us to pass...
+  choices1:
+  - {fileID: 11400000, guid: 04c941ea2226942459a30fd9b918f2cb, type: 2}
+  - {fileID: 11400000, guid: a5cdcf31488a502468e2c3d95668a9de, type: 2}
+  - {fileID: 11400000, guid: 1b01f7f21ac207044984cdf9e060b1ed, type: 2}
+  choicesEnglishUK:
+  - {fileID: 11400000, guid: a0805663461cd5341ba5953926219d01, type: 2}
+  - {fileID: 11400000, guid: e9b05ab2a5ddb04428ac9acaed00a776, type: 2}
+  - {fileID: 11400000, guid: 6281634f34ace4c4ea7d73574ab29c63, type: 2}
+  minScraps: 10
+  maxScraps: 20
+  ships: []

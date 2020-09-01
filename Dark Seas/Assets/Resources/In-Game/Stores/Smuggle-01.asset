@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f074f14db6c3e214bbae9a7a696cb53d, type: 3}
+  m_Name: Smuggle-01
+  m_EditorClassIdentifier: 
+  name: Cloaked Smuggler
+  id: 1
+  itemsForSaleAmount: 10
+  possibleItems:
+  - {fileID: 11400000, guid: 702e38c2573c90040a855d65eed291aa, type: 2}
+  - {fileID: 11400000, guid: 959a6f0602b5e2f439514b2b648e2c7e, type: 2}
+  - {fileID: 11400000, guid: 4fe9fd6f968c5fb4f84163d12a7449e0, type: 2}
+  - {fileID: 11400000, guid: e219cd17031efff4f9b1f8055d7b27b7, type: 2}
+  - {fileID: 11400000, guid: 6fe29618d9cce354f893908e2c68fc23, type: 2}
+  - {fileID: 11400000, guid: afa9f2e665277234bb30b440ce00b743, type: 2}
+  - {fileID: 11400000, guid: e5c21ea6f15c3514d8b9ef9693c5bd83, type: 2}
+  - {fileID: 11400000, guid: e06615c4303d6a74788575c7184e46da, type: 2}
+  - {fileID: 11400000, guid: 3a4b86d60f2a9f742b7715219afda785, type: 2}
+  - {fileID: 11400000, guid: a5a986148357ccb4185a9d26b2fdb636, type: 2}
+  - {fileID: 11400000, guid: 0a17ba0259ee95140a082b0578f4422f, type: 2}
+  - {fileID: 11400000, guid: 72d42ff381c76e344af4a388bd8edbc3, type: 2}
+  - {fileID: 11400000, guid: eeeffb4e08bc9c94cb77a06e10a94ee6, type: 2}
+  - {fileID: 11400000, guid: 4f78b34f89b35b3458e1fd009969fb83, type: 2}
+  - {fileID: 11400000, guid: 2929dfbfc481a314d8c24a2933530658, type: 2}
+  - {fileID: 11400000, guid: 6a669fb1a27309e4a8d62c202aa7083b, type: 2}
+  - {fileID: 11400000, guid: 11a9a84e2d3b5ec4c985362c39b21517, type: 2}
+  - {fileID: 11400000, guid: 0952274ab5115784d9ed2f82d4cf9f3a, type: 2}
+  - {fileID: 11400000, guid: c3e0f28995bb6b742b9af17fde4ff618, type: 2}
+  - {fileID: 11400000, guid: 77b494d524d16c44e9c8f7a32b545d36, type: 2}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a4e6f1dd04ed04c98ab49348cefe01, type: 3}
+  m_Name: PayBribe-EN
+  m_EditorClassIdentifier: 
+  id: 0
+  text: '"Smart choice. Well... Now think carefully what you''re going to give us,
+    because we know you''ve got the goods in there."'
+  isFight: 0
+  battle: {fileID: 0}
+  isIntruder: 0
+  scraps: 0
+  rewards: []
+  crew: []
+  intruder: []
+  choices:
+  - {fileID: 11400000, guid: a53f1f45f6a6605408c323a41da630b8, type: 2}
+  - {fileID: 11400000, guid: 3a978f996c45e404bbc3e36da0cd7f71, type: 2}
+  - {fileID: 11400000, guid: d6c653292de51ff4ebe72cf45e2fc85a, type: 2}

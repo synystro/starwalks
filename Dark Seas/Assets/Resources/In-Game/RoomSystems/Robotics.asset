@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c3dbf906dfc6a458d0b8489466d1c2, type: 3}
+  m_Name: Robotics
+  m_EditorClassIdentifier: 
+  id: 10
+  hudPriority: 8
+  targetPriority: 4
+  name: Robotics
+  icon: {fileID: 21300000, guid: 6f3cefbf24bc7ea4b892086ee05eb21c, type: 3}
+  roomSystemPrefab: {fileID: 5795240152233624403, guid: 0632efdafb223ba43b7dfd1599a5b462,
+    type: 3}
+  basePowerCap: 1

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c3dbf906dfc6a458d0b8489466d1c2, type: 3}
+  m_Name: Oxygen
+  m_EditorClassIdentifier: 
+  id: 6
+  hudPriority: 5
+  targetPriority: 7
+  name: Oxygen
+  icon: {fileID: 21300000, guid: 15266d7e8b8a4d1468775c09d2e42388, type: 3}
+  roomSystemPrefab: {fileID: 5795240152233624403, guid: 1923d5c1a72125948b2dbe305204e9fb,
+    type: 3}
+  basePowerCap: 1

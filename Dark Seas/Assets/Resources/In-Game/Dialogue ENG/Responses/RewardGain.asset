@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a4e6f1dd04ed04c98ab49348cefe01, type: 3}
+  m_Name: RewardGain
+  m_EditorClassIdentifier: 
+  id: 0
+  text: Captain, we've found scraps!
+  isFight: 0
+  isStore: 0
+  isIntruder: 0
+  scraps: 50
+  itemRewards:
+  - {fileID: 11400000, guid: 4fe9fd6f968c5fb4f84163d12a7449e0, type: 2}
+  - {fileID: 11400000, guid: 959a6f0602b5e2f439514b2b648e2c7e, type: 2}
+  - {fileID: 11400000, guid: 2548e6accaeb0394c83d95779bfed279, type: 2}
+  - {fileID: 11400000, guid: e219cd17031efff4f9b1f8055d7b27b7, type: 2}
+  crewRewards:
+  - {fileID: 4529539345263449059, guid: 3d4890f58476e834493d3a9e0681f847, type: 3}
+  intruder: []
+  choices: []
